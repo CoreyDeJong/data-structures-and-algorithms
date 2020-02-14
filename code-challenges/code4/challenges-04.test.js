@@ -84,7 +84,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  let regex = /\b[Oo]ct(?:ber)\b/;
+  let regex = /\b[Oo]ct(ober)?\b/;
   return input.match(regex);
 };
 
