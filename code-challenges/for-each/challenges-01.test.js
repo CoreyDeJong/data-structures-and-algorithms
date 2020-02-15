@@ -39,12 +39,12 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 2', () => {
-  test('It should add the number 8 to the array five times', () => {
-    expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
-    expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
-  });
-});
+// describe('Testing challenge 2', () => {
+//   test('It should add the number 8 to the array five times', () => {
+//     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
+//     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
+//   });
+// });
 
 
 
@@ -71,12 +71,12 @@ Then, write a function named removeElements that takes in an array and a callbac
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 3', () => {
-  test('It should remove three elements from the array', () => {
-    expect(removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
-    expect(removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
-  });
-});
+// describe('Testing challenge 3', () => {
+//   test('It should remove three elements from the array', () => {
+//     expect(removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
+//     expect(removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
+//   });
+// });
 
 
 
@@ -107,19 +107,19 @@ Write a function named removeWithForEach that produces the same output as challe
 //   });
 
 
-const removeWithForEach = (num, arr);
-  removeWithForEach.forEach(num) => {
-  if(num % 3 === 2 ){
-    arr.pop();
+const removeWithForEach = (num, arr) => {
+  removeWithForEach.forEach(num); {
+  if(num % 3 === 2 );
+  arr.pop();
   }
 };
 
-const removeElements = (arr, callback) => {
-  for (let i = 0; i<arr.length; i++){
-    callback(arr[i], arr);
-  }
-  return arr;
-};
+// const removeElements = (arr, callback) => {
+//   for (let i = 0; i<arr.length; i++){
+//     callback(arr[i], arr);
+//   }
+//   return arr;
+// };
 
 
 
@@ -186,12 +186,12 @@ This function should use forEach to populate your grocery list based on the stor
 // });
 
 
-const createList = (availableItems) => {
-  availableItems.forEach(name, available) =>{
-    if(available = true).push(availableItems);
-    return availableItems;
-  }
-};
+// const createList = (availableItems) => {
+//   availableItems.forEach(name, available) =>{
+//     if(available = true).push(availableItems);
+//     return availableItems;
+//   }
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
