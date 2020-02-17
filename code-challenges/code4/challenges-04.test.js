@@ -68,7 +68,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let regex = /^[A-J]*\w+/mg;
+  let cities = [];
+  arr.forEach(value => {
+    if(regex.test(value)){
+      cities.push(value);
+    }
+  })
+    return(cities);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,7 +106,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  // Solution code here...ok
 };
 
 /* ------------------------------------------------------------------------------------------------
