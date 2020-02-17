@@ -171,7 +171,7 @@ const meetings = [
 ];
 
 const sortMeetingsByDay = (arr) => {
-  // Solution code here...
+  // Solution code here...something
 };
 
 /* ------------------------------------------------------------------------------------------------
