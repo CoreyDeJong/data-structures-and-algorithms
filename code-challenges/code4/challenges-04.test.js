@@ -57,10 +57,14 @@ Return an array containing all the matches.
 
 
 const isCapitalized = (str) => {
-  // let regex = //
-  // return str.match(regex);
+  let regex = /\b[A-Z][a-z]*\b/g;
+  let answer = str.match(regex);
+  if(answer){
+      return answer;
+  }else{
+      return [];
+  }
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -74,8 +78,8 @@ const citiesAtoJ = (arr) => {
     if(regex.test(value)){
       cities.push(value);
     }
-  })
-    return(cities);
+  });
+    return cities;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,10 +95,9 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  let regex = /\b[Oo]ct(ober)?\b/;
-  return input.match(regex);
-};
-
+  let regex = /\bOct|oct(ober)?\b/gm;
+  return regex.test(input);
+  };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -106,8 +109,9 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...ok
-};
+  let regex = /\w+\s/gmi;
+  return str.match(regex);
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
