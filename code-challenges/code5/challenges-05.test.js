@@ -13,10 +13,24 @@ For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
 
+// str = Welcome
+
+
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+
+  // for the length of the string
+  for (let i = 0; i<str.length +1; i++){
+  
+  // slice off the first index
+  result.push(str.slice(i));
+};
+  
+    
+
+  // for every instance of split, use slice(arr.length-1) and use splice to remove that element. 
   return result;
+  console.log(result);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,8 +41,12 @@ Write a function name wordsToCharList that, given a string as input, returns a n
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
+// arr = gregor
+
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  // string to an array
+  return arr.split('')
+  
 };
 
 
