@@ -107,19 +107,19 @@ Write a function named removeWithForEach that produces the same output as challe
 //   });
 
 
-const removeWithForEach = (num, arr) =>;
-  removeWithForEach.forEach(num){
+const removeWithForEach = (num, arr) => {
+  removeWithForEach.forEach(num)
   if(num % 3 === 2 ){
     arr.pop();
   }
 };
 
-const removeElements = (arr, callback) => {
-  for (let i = 0; i<arr.length; i++){
-    callback(arr[i], arr);
-  }
-  return arr;
-};
+// const removeElements = (arr, callback) => {
+//   for (let i = 0; i<arr.length; i++){
+//     callback(arr[i], arr);
+//   }
+//   return arr;
+// };
 
 
 
@@ -187,10 +187,9 @@ This function should use forEach to populate your grocery list based on the stor
 
 
 // const createList = (availableItems) => {
-//   availableItems.forEach(name, available) =>{
+//   availableItems.forEach(name, available) =>
 //     if(available = true).push(availableItems);
 //     return availableItems;
-//   }
 // };
 
 /* ------------------------------------------------------------------------------------------------
