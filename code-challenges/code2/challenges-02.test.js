@@ -82,6 +82,8 @@ append(a, b);
 console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
+//ok
+
 const append = (arr1, arr2) => {
   arr2.forEach(value =>{
     arr1.push(value);
