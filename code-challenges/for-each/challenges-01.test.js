@@ -107,28 +107,12 @@ Write a function named removeWithForEach that produces the same output as challe
 //   });
 
 
-const removeWithForEach = (num, arr) => {
-  removeWithForEach.forEach(num)
-  if(num % 3 === 2 ){
-    arr.pop();
-  }
+const removeWithForEach = (arr, callback) => {
+  arr.forEach(value => {
+    callback(value,arr);
+  });
+  return arr;
 };
-
-// const removeElements = (arr, callback) => {
-//   for (let i = 0; i<arr.length; i++){
-//     callback(arr[i], arr);
-//   }
-//   return arr;
-// };
-
-
-
-// const removeWithForEach = (arr, callback) => {
-//   arr.forEach(value) => {
-//     callback(value, arr)
-//   })
-//   return arr;
-// };
 
 
 
@@ -152,11 +136,12 @@ This anonymous function should accept up to three arguments: the element, the in
 
 
 const removeWithAnon = (arr) => {
-//     arr.forEach(value => {
-//         callback(value, index, arr)
-//       })
-//       return arr;
-//     };
+  arr.forEach(function (value, index, arr){
+    if (value %3 === 2){
+      arr.pop();
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -185,12 +170,17 @@ This function should use forEach to populate your grocery list based on the stor
 //   });
 // });
 
+//
 
-// const createList = (availableItems) => {
-//   availableItems.forEach(name, available) =>
-//     if(available = true).push(availableItems);
-//     return availableItems;
-// };
+const createList = (availableItems) => {
+  let array = [];
+  availableItems.forEach(item => {
+    if(item.available === true){
+      array.push(item.name);
+    }
+  });
+  return array;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -207,8 +197,21 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let fizzBuzzArray = [];
+  arr.forEach(value => {
+    if((value %3 === 0) && (value %5 === 0)){
+      fizzBuzzArray.push('Fizz Buzz');
+    }else if (value %3 === 0){
+      fizzBuzzArray.push('Fizz');
+    }else if (value %5 === 0){
+      fizzBuzzArray.push('Buzz');
+    }else{
+      fizzBuzzArray.push(value);
+    }
+  });
+  return(fizzBuzzArray);
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
