@@ -7,9 +7,15 @@ Write a function named countNumberOfElements that, given an array as input, uses
 
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
-
+// [1, 2, 3, 4, 5]
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  return arrCount = arr.reduce( function(accumulator, value, idx){
+
+console.log(arrCount)
+
+  }, 0)
+
+  reduce to count the number of elements in the array
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,7 +87,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  let str = str.split();
+  let revString = arr.reduce((newString, currentLetter) => {
+
+    return currentLetter + newString;
+  },'');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
