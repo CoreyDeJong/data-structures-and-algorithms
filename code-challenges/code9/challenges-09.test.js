@@ -7,9 +7,13 @@ Write a function named countNumberOfElements that, given an array as input, uses
 
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
-
+// [1, 2, 3, 4, 5]
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+
+    return arr.reduce((accumulator, value) => {
+      return value;
+    }, 0);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,7 +73,11 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  
+    return arr.reduce((acc, val) => {
+      acc.push(val.name);
+      return acc;
+    }, []); 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,7 +89,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  // let str = str.split('');
+  // let revString = arr.reduce((newString, currentLetter) => {
+
+  //   return currentLetter + newString;
+  // },'');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,7 +147,13 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  return arr.reduce((acc, val) => {
+    if(val.children) acc += val.children.length;
+    return acc;
+  }, 0); 
+
+  // val.children? acc += val.children.length : 0;  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -144,9 +163,14 @@ Write a function that, given an array of numbers as input, uses reduce to calcul
 
 Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
+// [18, 290, 37, 4, 55, 16, 7, 85 ]
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+
+  return arr.reduce((accumulator, value) => {
+    return accumulator + value;
+  }, 0) / arr.length;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -156,6 +180,9 @@ Write a function named countPrimeNumbers that, given an array elements as input,
 
 You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
+
+// [1, 2, 13, 64, 45, 56, 17, 8]
+
 
 const isPrime = (value) => {
   for (let i = 2; i < value; i++) {
@@ -167,8 +194,17 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  return arr.reduce((acc, val) =>{
+    if(isPrime (val)){
+      acc++;
+    }
+    return acc;
+
+  }, 0);
+
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
