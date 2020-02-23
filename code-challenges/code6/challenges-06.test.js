@@ -69,8 +69,10 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // houses.push(characters['house']);
-  characters[0].house
+
+  Object.values(arr).forEach((person) =>{
+    houses.push(person.house)
+  })
   return houses;
 };
 
@@ -84,8 +86,16 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  let kids;
+  arr.forEach(obj => {
+    if(Object.values(obj)[0] === character && Object.values(obj)[2].length !== 0){
+      kids = true;
+    } else if (Object.values(obj)[0] === character && Object.values(obj)[2].length === 0) {
+      kids = false;
+    }
+  })
 
+return (kids);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,7 +105,16 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let kids;
+  arr.forEach(obj => {
+    if(Object.entries(obj)[0][1] === character && Object.entries(obj)[2][1].length !== 0){
+      kids = true;
+    } else if (Object.entries(obj)[0][1] === character && Object.entries(obj)[2][1].length === 0) {
+      kids = false;
+    }
+  })
+
+return (kids);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,7 +123,17 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let characterCount = 0;
+  Object.values(arr).forEach((obj) => {
+    if (obj.name) {
+      characterCount++;
+    } if (obj.spouse) {
+      characterCount++;
+    } if (obj.children.length > 0) {
+      characterCount += obj.children.length;
+    }
+  })
+  return characterCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
