@@ -11,7 +11,10 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+  for(let i = 0; i < arr.length; i++ ) {
+   return nums[i] = nums[i] * nums[i];
+  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +24,7 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  return (arr * arr)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +62,15 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
+  return arr.map(val => {
+    if(val %2 === 0) {
+      return 'even';
+    } else if( val %2 === 1){
+      return 'odd';
+    } else {
+      return 'N/A';
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
