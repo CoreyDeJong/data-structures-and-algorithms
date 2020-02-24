@@ -12,8 +12,6 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -108,7 +106,13 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
+    
+    // filter will return an array with filtered out data
+    data.filter((character)=> 
+    // filter out only characters that are male or female. Map will take the name and join and inbetween each occurrence.
+        character.gender === 'male' || character.gender ==='female').map((character)=> 
+            character.name).join(' and ')
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +122,14 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+   data.filter((character) =>
+   
+   const shortest = data.reduce((answerSoFar, character, index))
+   if(character.height < answerSoFar){
+       answerSoFar = string
+   }
+   
+   )
 };
 
 /* ------------------------------------------------------------------------------------------------
