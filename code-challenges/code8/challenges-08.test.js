@@ -9,7 +9,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  return arr.filter(x => (x % 2));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,7 +24,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  return arr.filter(answer => answer.match(/[aeiou]/gi));
 };
 
 
@@ -37,7 +37,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  return arr.filter(x => !forbiddenValues.includes(x));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +80,7 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  // Solution code here...
+  return arr.filter(x => x.baseStat>minBaseStat);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,7 +92,7 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,7 +145,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  return arr.filter(x => !x.children)
 };
 
 /* ------------------------------------------------------------------------------------------------
