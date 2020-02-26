@@ -59,6 +59,8 @@ const errands = [
   }
 ];
 
+//collaborated with chance on this
+
 const howManyTreats = (arr) => arr[2].items[1].quantity;
 
 /* ------------------------------------------------------------------------------------------------
