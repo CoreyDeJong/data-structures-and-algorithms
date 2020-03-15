@@ -8,13 +8,6 @@ Write a function named greeting that takes in a string and returns the string in
 Then, write a function named speaker that takes in a string and a callback function. The speaker function should return the string in all uppercase letters only by invoking the callback.
 ------------------------------------------------------------------------------------------------ */
 
-// describe('Testing challenge 1', () => {
-//   test('It should return the message with all uppercase characters', () => {
-//     expect(speaker('hello 301 students!', greeting)).toStrictEqual('HELLO 301 STUDENTS!');
-//   });
-// });
-
-
 const greeting = (word) => {
   return word.toUpperCase();
 };
@@ -39,24 +32,16 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-// describe('Testing challenge 2', () => {
-//   test('It should add the number 8 to the array five times', () => {
-//     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
-//     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
-//   });
-// }); test
-
-
-
 const addValues = (arr, value) => {
   arr.push(value);
 };
 
+// expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
+
 const addNumbers = (num, arr, times, callback) => {
-  for(let i=0; i< times; i++){
-    callback(arr, num);
-  }
-  return arr;
+  arr.push.forEach((times) => {
+    return num(callback);
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,26 +56,14 @@ Then, write a function named removeElements that takes in an array and a callbac
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-// describe('Testing challenge 3', () => {
-//   test('It should remove three elements from the array', () => {
-//     expect(removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
-//     expect(removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
-//   });
-// });
-
-
-
 const removeOne = (num, arr) => {
-  if(num % 3 === 2 ){
-    arr.pop();
-  }
+    if (num % 3 === 2){
+      arr.pop();
+    }
 };
 
 const removeElements = (arr, callback) => {
-  for (let i = 0; i<arr.length; i++){
-    callback(arr[i], arr);
-  }
-  return arr;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,23 +72,9 @@ CHALLENGE 4
 Write a function named removeWithForEach that produces the same output as challenge 3, but uses forEach.
 ------------------------------------------------------------------------------------------------ */
 
-// describe('Testing challenge 4', () => {
-//     test('It should remove three elements from the array', () => {
-//       expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
-//       expect(removeWithForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length).toStrictEqual(7);
-//     });
-//   });
-
-
 const removeWithForEach = (arr, callback) => {
-  arr.forEach(value => {
-    callback(value,arr);
-  });
-  return arr;
+  // Solution code here...
 };
-
-
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -127,21 +86,8 @@ This function should use forEach again, but rather than taking in a callback as 
 This anonymous function should accept up to three arguments: the element, the index, and the array.
 ------------------------------------------------------------------------------------------------ */
 
-// describe('Testing challenge 5', () => {
-//     test('It should remove three elements from the array', () => {
-//       expect(removeWithAnon([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
-//       expect(removeWithAnon([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).length).toStrictEqual(7);
-//     });
-//   });
-
-
 const removeWithAnon = (arr) => {
-  arr.forEach(function (value, index, arr){
-    if (value %3 === 2){
-      arr.pop();
-    }
-  });
-  return arr;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -161,25 +107,8 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
-// describe('Testing challenge 6', () => {
-//   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
-
-//   test('It should only add the available items to the list', () => {
-//     expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
-//     expect(createList(inventory).length).toStrictEqual(3);
-//   });
-// });
-
-//
-
 const createList = (availableItems) => {
-  let array = [];
-  availableItems.forEach(item => {
-    if(item.available === true){
-      array.push(item.name);
-    }
-  });
-  return array;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -197,21 +126,8 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  let fizzBuzzArray = [];
-  arr.forEach(value => {
-    if((value %3 === 0) && (value %5 === 0)){
-      fizzBuzzArray.push('Fizz Buzz');
-    }else if (value %3 === 0){
-      fizzBuzzArray.push('Fizz');
-    }else if (value %5 === 0){
-      fizzBuzzArray.push('Buzz');
-    }else{
-      fizzBuzzArray.push(value);
-    }
-  });
-  return(fizzBuzzArray);
+  // Solution code here...
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -272,7 +188,6 @@ describe('Testing challenge 7', () => {
 
   test('It should print out messages or numbers', () => {
     expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
-    expect(fizzbuzz(inputs).length).toStrictEqual(16);
     expect(fizzbuzz(inputs).length).toStrictEqual(16);
   });
 });
