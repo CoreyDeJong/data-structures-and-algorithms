@@ -36,12 +36,11 @@ const addValues = (arr, value) => {
   arr.push(value);
 };
 
-// expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
-
 const addNumbers = (num, arr, times, callback) => {
-  arr.push.forEach((times) => {
-    return num(callback);
-  })
+  for(let i=0; i< times; i++){
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,13 +56,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-    if (num % 3 === 2){
-      arr.pop();
-    }
+  if(num % 3 === 2 ){
+    arr.pop();
+  }
 };
 
 const removeElements = (arr, callback) => {
-  // Solution code here...
+  for (let i = 0; i<arr.length; i++){
+    callback(arr[i], arr);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +75,10 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  // Solution code here...
+  arr.forEach(value => {
+    callback(value,arr);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
