@@ -1,5 +1,7 @@
 'use strict';
 
+//received help from Chance H.
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -89,14 +91,15 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-let kids;
-arr.forEach((obj) => {
-  if(Object.values(obj)[2].length !== 0){
+let kids = 0;
+arr.forEach(name =>  {
+  if(Object.values(name)[0]===character&&Object.values(name)[2].length!==0){
     kids = true;
-  } else if(Object.values(obj)[2].length === 0){
+  } else if(Object.values(name)[0]===character&&Object.values(name)[2].length === 0){
     kids = false;
   }
-})
+
+});
 return (kids);
 
 };
